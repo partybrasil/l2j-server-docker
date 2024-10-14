@@ -50,6 +50,9 @@ Como instalar a imagem docker do L2jServer?
 Vamos agora clonar o repositório que a l2jserver publicou com seu seviço docker usando o comando:
 
 git clone https://bitbucket.org/l2jserver/l2j-server-docker.git
+OFFICIAL ou MEU
+git clonehttps://github.com/partybrasil/l2j-server-docker.git
+
 O resultado deve ser como a imagem abaixo:
 
 image.png
