@@ -1,3 +1,13 @@
+# L2j Server Docker image running on Alpine Linux with docker-compose
+
+[![Docker Pulls](https://img.shields.io/docker/pulls/l2jserver/l2j-server-docker.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/r/l2jserver/l2j-server-docker/)
+
+[![Alpine Version](https://img.shields.io/badge/Alpine%20version-v3.12.0-green.svg?style=for-the-badge&logo=alpine-linux)](https://alpinelinux.org/)
+[![MariaDB Version](https://img.shields.io/badge/Mariadb%20version-v10.4.13-green.svg?style=for-the-badge&logo=mariadb)](https://mariadb.org/)
+
+
+This docker-compose is using [(yobasystems/alpine-mariadb)](https://hub.docker.com/r/yobasystems/alpine-mariadb/) based on the minimal [Alpine Linux](https://alpinelinux.org/) with [MariaDB v10.4.13](https://mariadb.org/)
+
 https://www.l2jbrasil.com/topic/140221-colocando-um-servidor-l2jserver-online-em-10-minutos-uma-abordagem-de-2020/#comment-818154
 Créditos todos a @Grundor
 
