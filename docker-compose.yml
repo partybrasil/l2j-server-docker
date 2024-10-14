@@ -13,7 +13,7 @@ services:
       - /var/lib/mysql
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_ROOT_PASSWORD: "root"
     ports:
       - "3306:3306"
   l2jserver:
@@ -27,24 +27,50 @@ services:
     #     branch_gs: "develop"
     #     branch_dp: "develop"
     environment:
-      IP_ADDRESS: ${GAMESERVER_ADDRESS}
+      IP_ADDRESS: "127.0.0.1"
+      LAN_ADDRESS: "10.0.0.0"
+      LAN_SUBNET: "10.0.0.0/8"
+      JAVA_XMS: "512m"
+      JAVA_XMX: "2g" 
       RATE_XP: "1"
       RATE_SP: "1"
+      QUEST_MULTIPLIER_XP: "1"
+      QUEST_MULTIPLIER_SP: "1"
+      QUEST_MULTIPLIER_REWARD: "1"
+      AUTO_LEARN_SKILLS: "False"
+      MAX_FREIGHT_SLOTS: "200"
+      DWARF_RECIPE_LIMIT: "50"
+      COMM_RECIPE_LIMIT: "50"
+      CRAFTING_SPEED_MULTIPLIER: "1"
+      FREE_TELEPORTING: "False"
+      STARTING_ADENA: "0"
+      STARTING_LEVEL: "1"
+      STARTING_SP: "0"
+      ALLOW_MANOR: "True"
+      MAX_ONLINE_USERS: "500"
+      MAX_WAREHOUSE_SLOTS_DWARF: "120"
+      MAX_WAREHOUSE_SLOTS_NO_DWARF: "100"
+      MAX_WAREHOUSE_SLOTS_CLAN: "200"
+      PET_XP_RATE: "1"
+      RATE_ADENA: "1"
       ADMIN_RIGHTS: "True"
-      HELLBOUND_ACCESS: "True"
-      TVT_ENABLED: "True"
       FORCE_GEODATA: "False"
       COORD_SYNC: "-1"
-      BUFFER_SERVICE: "True"
-      CUSTOM_NPC_DATA: "True"
+      HELLBOUND_ACCESS: "True"
+      WEIGHT_LIMIT: "1"
+      TVT_ENABLED: "True"
       SAVE_GM_SPAWN_ON_CUSTOM: "True"
       CUSTOM_SPAWNLIST_TABLE: "True"
+      CUSTOM_NPC_DATA: "True"
       CUSTOM_TELEPORT_TABLE: "True"
       CUSTOM_NPC_BUFFER_TABLES: "True"
       CUSTOM_SKILLS_LOAD: "True"
       CUSTOM_ITEMS_LOAD: "True"
       CUSTOM_MULTISELL_LOAD: "True"
       CUSTOM_BUYLIST_LOAD: "True"
+      VITALITY_SYSTEM: "True"
+      ITEM_SPOIL_MULTIPLIER: "1"
+      ITEM_DROP_MULTIPLIER: "1"
     depends_on:
       - mariadb
     ports:
